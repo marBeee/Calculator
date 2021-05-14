@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src = "calc.js" defer></script>
+    <style>
+        .flex{display:flex;
+        }
+        .table{
+            width:500px;
+        }
+        button{
+            width:50px;
+        }
+        .histitle{
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class = "table">
+            <p id="num1">‎</p>
+            <input id="output" type="text" disabled value = '0'>
+            <table>
+                <tr>
+                    <td><button onclick="numberClicked(1);">1</button></td>
+                    <td><button onclick="numberClicked(2);">2</button></td>
+                    <td><button onclick="numberClicked(3);">3</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="numberClicked(4);">4</button></td>
+                    <td><button onclick="numberClicked(5);">5</button></td>
+                    <td><button onclick="numberClicked(6);">6</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="numberClicked(7);">7</button></td>
+                    <td><button onclick="numberClicked(8);">8</button></td>
+                    <td><button onclick="numberClicked(9);">9</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="numberClicked(0);">0</button></td>
+                    <td><button onclick="operationClicked('+');">+</button></td>
+                    <td><button onclick="operationClicked('-');">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="operationClicked('/');">/</button></td>
+                    <td><button onclick="operationClicked('*');">*</button></td>
+                    <td><button onclick="operationClicked('%');">%</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="clearFields();">c</button></td>
+                    <td></td>
+                    <td><button onclick="submitOperation();">=</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id ="history">
+            <p class = histitle>History</p>
+            <table id = hist>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
